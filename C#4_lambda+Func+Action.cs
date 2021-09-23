@@ -33,7 +33,7 @@ namespace HelloWorld
 
         Console.WriteLine(add(1,2));            // ————————【2】
         
-        Func<int , int ,bool> subequal = (a,b)=> a==b;  // ————————【3】
+        Func<int , int ,bool> subequal = (c,d)=> c==d;  // ————————【3】
         Console.WriteLine(subequal(2,2));
         
         Func<int, int> square = y =>y * y;             
