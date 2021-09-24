@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
 
-namespace CAttribute
+namespace HelloWorld
 {
   class Test
   {
