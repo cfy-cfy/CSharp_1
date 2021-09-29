@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace ConsoleApp1
+namespace HelloWorld
 {
     class Program
     { 
