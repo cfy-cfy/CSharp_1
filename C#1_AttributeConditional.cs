@@ -30,3 +30,24 @@ namespace HelloWorld
   }
 }
 
+
+// 【Attribute的使用方法：（四种方式完全等价）】
+// //长记法
+// [ConditionalAttribute("Li")]
+// [ConditionalAttribute("NoBug")]
+// public static void Func()
+// {Console.WriteLine("Created by Li, NoBug"); }
+// //短记法
+// [Conditional("Li")]
+// [Conditional("NoBug")]
+// public static void Func()
+// {Console.WriteLine("Created by Li, NoBug"); }
+// //换序
+// [Conditional("NoBug")]
+// [Conditional("Li")]
+// public static void Func()
+// {Console.WriteLine("Created by Li, NoBug"); }
+// //单括号叠加
+// [Conditional("NoBug"),Conditional("Li")]
+// public static void Func()
+// {Console.WriteLine("Created by Li, NoBug"); } 
