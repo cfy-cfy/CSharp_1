@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics; // 特性
 using System.Reflection;  // 反射
  
-namespace HelloWorld
+namespace USATTRIBUTE
 {
     [AttributeUsage(AttributeTargets.Class |
     AttributeTargets.Constructor |
