@@ -54,14 +54,12 @@ namespace HelloWorld
       Console.WriteLine("{0} Company total pay wage:{1} RMB", "A","B");
     }
 
-
   }
 
   class MyClassJCZ:MyClass
   {
 
   }
-
 
   public class Program
   {
@@ -77,12 +75,12 @@ namespace HelloWorld
             Console.WriteLine(dbi.Url);
 
         }
-          Console.WriteLine("\r\n----------------------------------------------------[1]");
+          Console.WriteLine("\r\n-------------------- 指定 MyClass 【类】的特性 --------------------------------[1]\r\n");
 
           Type t=typeof(HelloWorld.MyClass);
           // HelpAttribute myAttribute = (HelpAttribute)Attribute.GetCustomAttribute(t, typeof(HelpAttribute));
           Attribute[] attrs = Attribute.GetCustomAttributes(t,typeof(HelpAttribute));  //反射获得用户自定义属性
-          HelpAttribute myAttribute=attrs[1] as HelpAttribute;
+          HelpAttribute myAttribute=attrs[0] as HelpAttribute;
           if(myAttribute == null)
           {
               Console.WriteLine(typeof(HelloWorld.MyClass).ToString() + "类中自定义特性不存在！");
@@ -92,7 +90,7 @@ namespace HelloWorld
               Console.WriteLine($"{t.ToString()}类中的特性描述为：{myAttribute.Url},加入时间为：");
           }
 
-          Console.WriteLine("\r\n----------------------------------------------------[2]");
+          Console.WriteLine("\r\n----------------------- 遍历 MyClass 【类】的特性 -----------------------------[2]\r\n");
 
           Type t1 = typeof(MyClass);
           Attribute[] attrs1 = Attribute.GetCustomAttributes(t1,typeof(HelpAttribute));  //反射获得用户自定义属性
@@ -106,9 +104,8 @@ namespace HelloWorld
                 }
             }
 
-           Console.WriteLine("\r\n----------------------------------------------------[3]");
+           Console.WriteLine("\r\n--------------------- 遍历 MyClass 【类】的特性 -------------------------------[3]\r\n");
 
-          // 遍历 MyClass 类的特性
           Type type = typeof(MyClass);
           foreach (Object attributess in type.GetCustomAttributes(false))
           {
@@ -119,9 +116,8 @@ namespace HelloWorld
               }
           }
 
-          Console.WriteLine("\r\n----------------------------------------------------[4]");
+          Console.WriteLine("\r\n---------------------- 遍历 MyClass 类【方法】特性 ------------------------------[4]\r\n");
 
-           // 遍历 MyClass 类方法特性
           Type typee = typeof(MyClass);
           foreach (MethodInfo m in typee.GetMethods())
           {   
@@ -135,9 +131,8 @@ namespace HelloWorld
               }
           }
 
-         Console.WriteLine("\r\n----------------------------------------------------[5]");
+         Console.WriteLine("\r\n---------------------- 指定 MyClass 类【属性】特性 ------------------------------[5]\r\n");
 
-           // 遍历 MyClass 类属性特性
             PropertyInfo[] propertys = typeof(MyClass).GetProperties(); 
             if (propertys != null && propertys.Length > 0)
             {
@@ -153,7 +148,7 @@ namespace HelloWorld
                 };
             }
       
-          Console.WriteLine("\r\n----------------------------------------------------[6]");
+          Console.WriteLine("\r\n------------------------- 遍历 MyClassCJZ 【派生类】的特性 ---------------------------[6]\r\n");
 
           // 遍历 继承了MyClass 类方法特性 的 MyClassJCZ
           // 如果一个你有 A 类它本身没有任何的自定义属性，但是继承 B 类，而 B 类又有一个自定义属性 CAttribute，而且自定义属性的 AttributeUsage(Inherited=true)，
@@ -169,7 +164,7 @@ namespace HelloWorld
               }
           }
 
-          Console.WriteLine("\r\n----------------------------------------------------[7]");
+          Console.WriteLine("\r\n----------------------------------------------------[7]\r\n");
 
       }
   }
