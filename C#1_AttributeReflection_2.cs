@@ -35,12 +35,12 @@ namespace HelloWorld
   }
 
   [HelpAttribute("Information on the class MyClass 1")]
-  // [HelpAttribute("Information on the class MyClass 2")]
+  [HelpAttribute("Information on the class MyClass 2")]
   class MyClass
   {
     [HelpAttribute("Information on the Method PayToalWage 1")]
-    // [HelpAttribute("Information on the Method PayToalWage 2")]
-    // [HelpAttribute("Information on the Method PayToalWage 3")]
+    [HelpAttribute("Information on the Method PayToalWage 2")]
+    [HelpAttribute("Information on the Method PayToalWage 3")]
     public void PayToalWage()
     {
       Console.WriteLine("{0} Company total pay wage:{1} RMB", "A","B");
@@ -57,22 +57,39 @@ namespace HelloWorld
         for (int i = 0; i < attributes.Length; i++)
         {
             Console.WriteLine(attributes[i]);
+            HelpAttribute dbi = (HelpAttribute)attributes[i];
+            Console.WriteLine(dbi.Url);
+
         }
           Console.WriteLine("\r\n----------------------------------------------------");
 
-          Type t=typeof(HelloWorld.MyClass);
-          HelpAttribute myAttribute = (HelpAttribute)Attribute.GetCustomAttribute(t, typeof(HelpAttribute));
-          if(myAttribute == null)
-          {
-              Console.WriteLine(typeof(HelloWorld.MyClass).ToString() + "类中自定义特性不存在！");
-          }
-          else
-          {
-              Console.WriteLine($"{t.ToString()}类中的特性描述为：{myAttribute.Url},加入时间为：");
-          }
+          // Type t=typeof(HelloWorld.MyClass);
+          // HelpAttribute myAttribute = (HelpAttribute)Attribute.GetCustomAttribute(t, typeof(HelpAttribute));
+          // if(myAttribute == null)
+          // {
+          //     Console.WriteLine(typeof(HelloWorld.MyClass).ToString() + "类中自定义特性不存在！");
+          // }
+          // else
+          // {
+          //     Console.WriteLine($"{t.ToString()}类中的特性描述为：{myAttribute.Url},加入时间为：");
+          // }
 
           Console.WriteLine("\r\n----------------------------------------------------");
+
+          Type t = typeof(MyClass);
+          Attribute[] attrs = Attribute.GetCustomAttributes(t,typeof(HelpAttribute));  //反射获得用户自定义属性
  
+            foreach (Attribute attr in attrs)
+            {
+                if (attr is HelpAttribute)
+                {
+                    HelpAttribute a = (HelpAttribute)attr;
+                    System.Console.WriteLine("   名称：{0}, 版本： ", a.Url);
+                }
+            }
+
+           Console.WriteLine("\r\n----------------------------------------------------");
+
           // 遍历 MyClass 类的特性
           Type type = typeof(MyClass);
           foreach (Object attributess in type.GetCustomAttributes(false))
