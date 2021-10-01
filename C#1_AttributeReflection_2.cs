@@ -8,7 +8,7 @@ using System.Reflection;  // 反射
 
 namespace HelloWorld
 {
-  [AttributeUsage(AttributeTargets.All,AllowMultiple = true)]
+  [AttributeUsage(AttributeTargets.All,AllowMultiple = true,Inherited=true)]
   public class HelpAttribute : Attribute
   {
     
@@ -41,11 +41,17 @@ namespace HelloWorld
     [HelpAttribute("Information on the Method PayToalWage 1")]
     [HelpAttribute("Information on the Method PayToalWage 2")]
     [HelpAttribute("Information on the Method PayToalWage 3")]
-    public void PayToalWage()
+    public static void PayToalWage()
     {
       Console.WriteLine("{0} Company total pay wage:{1} RMB", "A","B");
     }
   }
+
+  class MyClassJCZ:MyClass
+  {
+
+  }
+
 
   public class Program
   {
@@ -106,7 +112,7 @@ namespace HelloWorld
            // 遍历 MyClass 类方法特性
           Type typee = typeof(MyClass);
           foreach (MethodInfo m in typee.GetMethods())
-          {
+          {   
               foreach (Attribute a in m.GetCustomAttributes(true))
               {
                   HelpAttribute dbii = (HelpAttribute)a;
@@ -116,6 +122,23 @@ namespace HelloWorld
                   }
               }
           }
+
+          Console.WriteLine("\r\n----------------------------------------------------");
+
+          // 遍历 继承了MyClass 类方法特性 的 MyClassJCZ
+          // 如果一个你有 A 类它本身没有任何的自定义属性，但是继承 B 类，而 B 类又有一个自定义属性 CAttribute，而且自定义属性的 AttributeUsage(Inherited=true)，
+          // 那么当你在 A 类上使用 GetCustomAttributes(true) 你就可以获在 B 类上的自定义属性 CAttribute。如果你在 A 类上使用 GetCustomAttributes(false) 就不会返回任何的结果。
+
+          Type typeJCZ = typeof(MyClassJCZ);
+          foreach (Object attributess in typeJCZ.GetCustomAttributes(true))  // false时返回空；
+          {
+              HelpAttribute dbi = (HelpAttribute)attributess;
+              if (null != dbi)
+              {
+                  Console.WriteLine("Age: {0}", dbi.Url);
+              }
+          }
+
 
       }
   }
