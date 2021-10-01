@@ -142,7 +142,7 @@ namespace HelloWorld
                     //GetCustomAttributes(要搜索的特性类型，是否搜索该成员的继承链以查找这些特性)
                     if (objAttrs != null && objAttrs.Length > 0)
                     {
-                        HelpAttribute attr = objAttrs[0] as HelpAttribute;
+                        HelpAttribute attr = objAttrs[1] as HelpAttribute;
                         Console.WriteLine("自定义特性Name："+", 元数据："+attr.Url);
                     }
                 };
@@ -164,7 +164,12 @@ namespace HelloWorld
               }
           }
 
-          Console.WriteLine("\r\n----------------------------------------------------[7]\r\n");
+          Console.WriteLine("\r\n------------------------- 搜索具有指定名称的公共属性 + 设置指定实例 属性 的值 ---------------------------[7]\r\n");
+
+            MyClass fClass = new MyClass();
+            PropertyInfo pInstance = typeof(MyClass).GetProperty("Myclasskw");// 搜索具有指定名称的公共属性
+            pInstance.SetValue(fClass,"WHHXPP");                              // 设置指定实例 属性 的值
+            Console.WriteLine("新闻ID:"+fClass.Myclasskw);
 
       }
   }
