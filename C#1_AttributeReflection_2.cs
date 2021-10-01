@@ -38,8 +38,8 @@ namespace HelloWorld
   class MyClass
   {
     private string myclasskw;
-    [HelpAttribute("Information on the Myclasskw 1")]
-    [HelpAttribute("Information on the Myclasskw 2")]
+    [HelpAttribute("Information on the property Myclasskw 1")]
+    [HelpAttribute("Information on the property Myclasskw 2")]
     public string Myclasskw
     {
       get{return myclasskw;}
@@ -79,23 +79,25 @@ namespace HelloWorld
         }
           Console.WriteLine("\r\n----------------------------------------------------[1]");
 
-          // Type t=typeof(HelloWorld.MyClass);
+          Type t=typeof(HelloWorld.MyClass);
           // HelpAttribute myAttribute = (HelpAttribute)Attribute.GetCustomAttribute(t, typeof(HelpAttribute));
-          // if(myAttribute == null)
-          // {
-          //     Console.WriteLine(typeof(HelloWorld.MyClass).ToString() + "类中自定义特性不存在！");
-          // }
-          // else
-          // {
-          //     Console.WriteLine($"{t.ToString()}类中的特性描述为：{myAttribute.Url},加入时间为：");
-          // }
+          Attribute[] attrs = Attribute.GetCustomAttributes(t,typeof(HelpAttribute));  //反射获得用户自定义属性
+          HelpAttribute myAttribute=attrs[1] as HelpAttribute;
+          if(myAttribute == null)
+          {
+              Console.WriteLine(typeof(HelloWorld.MyClass).ToString() + "类中自定义特性不存在！");
+          }
+          else
+          {
+              Console.WriteLine($"{t.ToString()}类中的特性描述为：{myAttribute.Url},加入时间为：");
+          }
 
           Console.WriteLine("\r\n----------------------------------------------------[2]");
 
-          Type t = typeof(MyClass);
-          Attribute[] attrs = Attribute.GetCustomAttributes(t,typeof(HelpAttribute));  //反射获得用户自定义属性
+          Type t1 = typeof(MyClass);
+          Attribute[] attrs1 = Attribute.GetCustomAttributes(t1,typeof(HelpAttribute));  //反射获得用户自定义属性
  
-            foreach (Attribute attr in attrs)
+            foreach (Attribute attr in attrs1)
             {
                 if (attr is HelpAttribute)
                 {
