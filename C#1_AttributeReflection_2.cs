@@ -8,10 +8,9 @@ using System.Reflection;  // 反射
 
 namespace HelloWorld
 {
-  [AttributeUsage(AttributeTargets.All,AllowMultiple = true,Inherited=true)]  // 设置了使用范围为,一个类可以有多个特性,特性可被使用者的派生类继承
+  [AttributeUsage(AttributeTargets.All,AllowMultiple = true,Inherited=true)]
   public class HelpAttribute : Attribute
   {
-    
     private string topic;
     public string Topic  // Topic 是一个命名（named）参数
     {
@@ -38,6 +37,15 @@ namespace HelloWorld
   [HelpAttribute("Information on the class MyClass 2")]
   class MyClass
   {
+    private string myclasskw;
+    [HelpAttribute("Information on the Myclasskw 1")]
+    [HelpAttribute("Information on the Myclasskw 2")]
+    public string Myclasskw
+    {
+      get{return myclasskw;}
+      set{myclasskw=value;}
+    }
+
     [HelpAttribute("Information on the Method PayToalWage 1")]
     [HelpAttribute("Information on the Method PayToalWage 2")]
     [HelpAttribute("Information on the Method PayToalWage 3")]
@@ -45,6 +53,8 @@ namespace HelloWorld
     {
       Console.WriteLine("{0} Company total pay wage:{1} RMB", "A","B");
     }
+
+
   }
 
   class MyClassJCZ:MyClass
@@ -67,7 +77,7 @@ namespace HelloWorld
             Console.WriteLine(dbi.Url);
 
         }
-          Console.WriteLine("\r\n----------------------------------------------------");
+          Console.WriteLine("\r\n----------------------------------------------------[1]");
 
           // Type t=typeof(HelloWorld.MyClass);
           // HelpAttribute myAttribute = (HelpAttribute)Attribute.GetCustomAttribute(t, typeof(HelpAttribute));
@@ -80,7 +90,7 @@ namespace HelloWorld
           //     Console.WriteLine($"{t.ToString()}类中的特性描述为：{myAttribute.Url},加入时间为：");
           // }
 
-          Console.WriteLine("\r\n----------------------------------------------------");
+          Console.WriteLine("\r\n----------------------------------------------------[2]");
 
           Type t = typeof(MyClass);
           Attribute[] attrs = Attribute.GetCustomAttributes(t,typeof(HelpAttribute));  //反射获得用户自定义属性
@@ -94,7 +104,7 @@ namespace HelloWorld
                 }
             }
 
-           Console.WriteLine("\r\n----------------------------------------------------");
+           Console.WriteLine("\r\n----------------------------------------------------[3]");
 
           // 遍历 MyClass 类的特性
           Type type = typeof(MyClass);
@@ -107,7 +117,7 @@ namespace HelloWorld
               }
           }
 
-          Console.WriteLine("\r\n----------------------------------------------------");
+          Console.WriteLine("\r\n----------------------------------------------------[4]");
 
            // 遍历 MyClass 类方法特性
           Type typee = typeof(MyClass);
@@ -123,7 +133,25 @@ namespace HelloWorld
               }
           }
 
-          Console.WriteLine("\r\n----------------------------------------------------");
+         Console.WriteLine("\r\n----------------------------------------------------[5]");
+
+           // 遍历 MyClass 类属性特性
+            PropertyInfo[] propertys = typeof(MyClass).GetProperties(); 
+            if (propertys != null && propertys.Length > 0)
+            {
+                foreach (PropertyInfo p in propertys)
+                {              
+                    object[] objAttrs = p.GetCustomAttributes(typeof(HelpAttribute), true);//获取自定义特性
+                    //GetCustomAttributes(要搜索的特性类型，是否搜索该成员的继承链以查找这些特性)
+                    if (objAttrs != null && objAttrs.Length > 0)
+                    {
+                        HelpAttribute attr = objAttrs[0] as HelpAttribute;
+                        Console.WriteLine("自定义特性Name："+", 元数据："+attr.Url);
+                    }
+                };
+            }
+      
+          Console.WriteLine("\r\n----------------------------------------------------[6]");
 
           // 遍历 继承了MyClass 类方法特性 的 MyClassJCZ
           // 如果一个你有 A 类它本身没有任何的自定义属性，但是继承 B 类，而 B 类又有一个自定义属性 CAttribute，而且自定义属性的 AttributeUsage(Inherited=true)，
@@ -139,6 +167,7 @@ namespace HelloWorld
               }
           }
 
+          Console.WriteLine("\r\n----------------------------------------------------[7]");
 
       }
   }
