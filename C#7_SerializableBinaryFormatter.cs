@@ -1,3 +1,5 @@
+// 序列化的方式有三种:BinaryFormatter,SoapFormatter,XmlSerializer
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
