@@ -8,7 +8,7 @@ using System.Reflection;  // 反射
 
 namespace HelloWorld
 {
-  [AttributeUsage(AttributeTargets.All,AllowMultiple = true,Inherited=true)]
+  [AttributeUsage(AttributeTargets.All,AllowMultiple = true,Inherited=true)]  // 设置了使用范围为,一个类可以有多个特性,特性可被使用者的派生类继承
   public class HelpAttribute : Attribute
   {
     
