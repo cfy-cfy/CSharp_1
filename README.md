@@ -14,7 +14,7 @@ C# Learning
 
 【5】 有语法提示(弱)：https://rextester.com/
 
-【6】 有语法提示(弱)：https://dotnetfiddle.net/
+【6】 有语法提示(弱)：https://dotnetfiddle.net/     可用gmail登录fiddle账户
 
 【7】 有语法提示(很弱)：https://replit.com/languages/csharp
 
