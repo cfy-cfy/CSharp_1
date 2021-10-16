@@ -4,9 +4,9 @@ C# Learning
 
 【C# 在线运行工具】
 
-【1】 有语法提示：https://try.dot.net/
+【1】 有语法提示：https://try.dot.net/   快捷注释：ctrl+ /
 
-【2】 有语法提示：https://app.codingrooms.com/w/jRhF4zdtbxrM
+【2】 有语法提示：https://app.codingrooms.com/w/jRhF4zdtbxrM 快捷注释：ctrl+ /
 
 【3】 有语法提示：https://sharplab.io/
 
