@@ -22,6 +22,21 @@ namespace Rextester
 			WebResponse response = request.GetResponse(); 
 			StreamReader reader = new StreamReader(response.GetResponseStream()); //reader.ReadToEnd() 表示取得网页的源码
 			Console.WriteLine(reader.ReadToEnd());			
+			//——————————————————————————————————————————————————————————————		
+		    string requestUrl ="https://raw.githubusercontent.com/cfy-cfy/VBA_1/main/1_Download%20Llist.txt";
+		    using (var client = new WebClient())
+		    {
+			client.Headers.Add("Accept", "text/plain");
+			client.Headers.Add("Accept-Language", "en-US");
+			client.Headers.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)");
+			client.Headers["Content-Type"] = "text/plain;charset=UTF-8";
+			string responseText = client.DownloadString(requestUrl);
+			Console.WriteLine(responseText);
+		    } 			
+			
+			
+			
+			
 			
 		}
 	}
