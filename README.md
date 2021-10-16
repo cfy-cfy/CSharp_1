@@ -6,7 +6,7 @@ C# Learning
 
 【1】 有语法提示：https://try.dot.net/   快捷注释：ctrl+ /
 
-【2】 有语法提示：https://app.codingrooms.com/w/jRhF4zdtbxrM 快捷注释：ctrl+ /
+【2】 有语法提示：https://app.codingrooms.com/w/jRhF4zdtbxrM 快捷注释：ctrl+ /, 多语言,可用github登录
 
 【3】 有语法提示：https://sharplab.io/
 
