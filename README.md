@@ -12,7 +12,7 @@ C# Learning
 
 【4】 有语法提示：https://www.onlinegdb.com/online_csharp_compiler  快捷注释：ctrl+ /,多语言,可以下载文件
 
-【5】 有语法提示(弱)：https://rextester.com/  多语言, 可用cfy7788999@gmail.com登录, System.Net 运行成功
+【5】 有语法提示(弱)：https://rextester.com/  多语言, 可用gmail登录, System.Net 运行成功
 
 【6】 有语法提示(弱)：https://dotnetfiddle.net/     可用gmail登录fiddle账户，System.Net 运行成功
 
