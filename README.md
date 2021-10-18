@@ -10,7 +10,7 @@ C# Learning
 
 【3】 有语法提示：https://sharplab.io/
 
-【4】 有语法提示：https://www.onlinegdb.com/online_csharp_compiler  多语言，
+【4】 有语法提示：https://www.onlinegdb.com/online_csharp_compiler  快捷注释：ctrl+ /,多语言
 
 【5】 有语法提示(弱)：https://rextester.com/
 
