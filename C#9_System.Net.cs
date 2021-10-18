@@ -22,6 +22,15 @@ namespace Rextester
 			WebResponse response = request.GetResponse(); 
 			StreamReader reader = new StreamReader(response.GetResponseStream()); //reader.ReadToEnd() 表示取得网页的源码
 			Console.WriteLine(reader.ReadToEnd());	*/
+			
+			//——————————————————————————————————————————————————————————————
+		        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(file_uri);
+		        request.Method = "GET"; 
+		        request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0";
+			WebResponse response = request.GetResponse(); 
+			StreamReader reader = new StreamReader(response.GetResponseStream()); //reader.ReadToEnd() 表示取得网页的源码
+			Console.WriteLine(reader.ReadToEnd());	
+			
 			//——————————————————————————————————————————————————————————————		
 			string requestUrl ="https://raw.githubusercontent.com/cfy-cfy/VBA_1/main/1_Download%20Llist.txt";
 			//string requestUrl="https://www.baidu.com/";
