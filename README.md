@@ -16,7 +16,7 @@ C# Learning
 
 【6】 有语法提示(弱)：https://dotnetfiddle.net/     可用gmail登录，System.Net 运行成功
 
-【7】 有语法提示(很弱)：https://replit.com/languages/csharp  多语言
+【7】 有语法提示(很弱)：https://replit.com/languages/csharp  多语言,可用github登录
 
 【8】 没有语法提示：https://www.tutorialspoint.com/compile_csharp_online.php
 
