@@ -14,9 +14,9 @@ C# Learning
 
 【5】 有语法提示(弱)：https://rextester.com/  多语言, 可用gmail登录, System.Net 运行成功
 
-【6】 有语法提示(弱)：https://dotnetfiddle.net/     可用gmail登录fiddle账户，System.Net 运行成功
+【6】 有语法提示(弱)：https://dotnetfiddle.net/     可用gmail登录，System.Net 运行成功
 
-【7】 有语法提示(很弱)：https://replit.com/languages/csharp
+【7】 有语法提示(很弱)：https://replit.com/languages/csharp  多语言
 
 【8】 没有语法提示：https://www.tutorialspoint.com/compile_csharp_online.php
 
@@ -24,4 +24,4 @@ C# Learning
 
 【10】 没有语法提示：https://www.w3schools.com/cs/trycs.php?filename=demo_helloworld
 
-【11】没有语法提示：https://www.it1352.com/Onlinetools/details/1     System.Net 运行成功
+【11】没有语法提示：https://www.it1352.com/Onlinetools/details/1     多语言,System.Net 运行成功
