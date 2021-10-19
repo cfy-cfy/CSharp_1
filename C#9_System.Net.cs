@@ -14,7 +14,7 @@ namespace Rextester
 		public static void Main(string[] args)
 		{	
 			//string url_path ="https://www.baidu.com/";
-			//string url_path ="http://14.215.177.38/";
+			// string url_path ="http://14.215.177.38/";
 			//string url_path ="https://raw.githubusercontent.com/cfy-cfy/VBA_1/main/1_Download%20Llist.txt";
 			//string url_path ="https://raw.githubusercontent.com/hunkim/DeepLearningZeroToAll/master/data-03-diabetes.csv";
 			/*Uri file_uri = new Uri(url_path);
@@ -24,25 +24,25 @@ namespace Rextester
 			Console.WriteLine(reader.ReadToEnd());	*/
 			
 			//——————————————————————————————————————————————————————————————
-		        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(file_uri);
-		        request.Method = "GET"; 
-		        request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0";
+      string file_uri ="https://raw.githubusercontent.com/cfy-cfy/VBA_1/main/1_Download%20Llist.txt";
+      HttpWebRequest request = (HttpWebRequest)WebRequest.Create(file_uri);
+      request.Method = "GET"; 
+      request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0";
 			WebResponse response = request.GetResponse(); 
 			StreamReader reader = new StreamReader(response.GetResponseStream()); //reader.ReadToEnd() 表示取得网页的源码
 			Console.WriteLine(reader.ReadToEnd());	
 			
 			//——————————————————————————————————————————————————————————————		
-			string requestUrl ="https://raw.githubusercontent.com/cfy-cfy/VBA_1/main/1_Download%20Llist.txt";
-			//string requestUrl="https://www.baidu.com/";
-			    using (var client = new WebClient())
-			    {
-				client.Headers.Add("Accept", "text/plain");
-				client.Headers.Add("Accept-Language", "en-US");
-				client.Headers.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)");
-				client.Headers["Content-Type"] = "text/plain;charset=UTF-8";
-				string responseText = client.DownloadString(requestUrl);
-				Console.WriteLine(responseText);
-			    } 
+			//string requestUrl ="https://raw.githubusercontent.com/cfy-cfy/VBA_1/main/1_Download%20Llist.txt";
+        // using (var client = new WebClient())
+        // {
+        //   client.Headers.Add("Accept", "text/plain");
+        //   client.Headers.Add("Accept-Language", "en-US");
+        //   client.Headers.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)");
+        //   client.Headers["Content-Type"] = "text/plain;charset=UTF-8";
+        //   string responseText = client.DownloadString(requestUrl);
+        //   Console.WriteLine(responseText);
+        // } 
 			
 		}
 	}
