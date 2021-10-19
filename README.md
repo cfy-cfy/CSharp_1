@@ -18,9 +18,9 @@ C# Learning
 
 【6】 有语法提示(弱)：https://dotnetfiddle.net/     可用gmail登录，System.Net 运行成功
 
-【7】 没有语法提示：https://www.tutorialspoint.com/compile_csharp_online.php
+【7】 没有语法提示：https://www.tutorialspoint.com/codingground.htm 多语言, 可用登录
 
-【8】 没有语法提示：https://www.jdoodle.com/compile-c-sharp-online/
+【8】 没有语法提示：https://www.jdoodle.com/compile-c-sharp-online/  多语言, 可用gmail登录
 
 【9】 没有语法提示：https://www.w3schools.com/cs/trycs.php?filename=demo_helloworld
 
