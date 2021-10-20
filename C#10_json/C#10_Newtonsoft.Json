@@ -27,6 +27,7 @@ using System.ComponentModel;
                 Console.WriteLine("Data=" + rt.data[i].context + "\r\n" + rt.data[i].location + "\r\n" + rt.data[i].time + "\r\n" + rt.data[i].ftime);
 
             }
+        }
     }
     
     public class HttpUitls
@@ -62,25 +63,25 @@ using System.ComponentModel;
     
     }
 
-public class DataItem
-{
-    public string time { get; set; }
-    public string ftime { get; set; }
-    /// <summary>
-    /// 您的快件正在派送中，请您准备签收（快递员：邸越，联系电话：17704315240）
-    /// </summary>
-    public string context { get; set; }
-    public string location { get; set; }
-}
- 
-public class Root
-{
-    public string message { get; set; }
-    public string nu { get; set; }
-    public string ischeck { get; set; }
-    public string condition { get; set; }
-    public string com { get; set; }
-    public string status { get; set; }
-    public string state { get; set; }
-    public List <DataItem > data { get; set; }
-}
+    public class DataItem
+    {
+        public string time { get; set; }
+        public string ftime { get; set; }
+        /// <summary>
+        /// 您的快件正在派送中，请您准备签收（快递员：邸越，联系电话：17704315240）
+        /// </summary>
+        public string context { get; set; }
+        public string location { get; set; }
+    }
+    
+    public class Root
+    {
+        public string message { get; set; }
+        public string nu { get; set; }
+        public string ischeck { get; set; }
+        public string condition { get; set; }
+        public string com { get; set; }
+        public string status { get; set; }
+        public string state { get; set; }
+        public List <DataItem > data { get; set; }
+    }
