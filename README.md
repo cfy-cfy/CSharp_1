@@ -1,10 +1,24 @@
 # CSharp_1
 C# Learning
+————————————————————————————————————————————————————————————————————————————————————————————————————
+【格式转换工具网站】
 
-【工具：JSON转C#实体类】https://www.bejson.com/convert/json2csharp/
+【0】JSON转C#实体类： https://www.bejson.com/convert/json2csharp/
+————————————————————————————————————————————————————————————————————————————————————————————————————
 
-【C# 学习网站】https://docs.microsoft.com/zh-cn/dotnet/standard/serialization/custom-serialization
+【NuGet Package 网站或者安装命令】
+ 
+【0】Newtonsoft.Json ： PM> Install-Package Newtonsoft.Json || https://www.newtonsoft.com/json
 
+————————————————————————————————————————————————————————————————————————————————————————————————————
+
+【C# 学习网站】
+
+【0】官方文档：https://docs.microsoft.com/zh-cn/dotnet/standard/serialization/custom-serialization
+
+【1】基本实例：http://c.biancheng.net/view/2940.html
+
+————————————————————————————————————————————————————————————————————————————————————————————————————
 【C# 在线运行工具】
 
 【0】 有语法提示：https://replit.com/languages/csharp  快捷注释：ctrl+ /, 多语言,可以下载文件,可用github登录,System.Net 运行成功
