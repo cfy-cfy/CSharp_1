@@ -7,11 +7,14 @@ using System.IO;
 
 namespace HelloWorld
 {
-    public static void Main(string[] args)
+    public class Program
     {
-      string url = "http://www.kuaidi100.com/query?type=shunfeng&postid=367847964498";
-      string getJson = HttpUitls.Get(url);
-      Console.WriteLine(getJson);
+        public static void Main(string[] args)
+        {
+          string url = "http://www.kuaidi100.com/query?type=shunfeng&postid=367847964498";
+          string getJson = HttpUitls.Get(url);
+          Console.WriteLine(getJson);
+        }
     }
     
     public class HttpUitls
