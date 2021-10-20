@@ -1,6 +1,8 @@
 # CSharp_1
 C# Learning
 
+【工具：JSON转C#实体类】https://www.bejson.com/convert/json2csharp/
+
 【C# 学习网站】https://docs.microsoft.com/zh-cn/dotnet/standard/serialization/custom-serialization
 
 【C# 在线运行工具】
