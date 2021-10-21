@@ -22,28 +22,28 @@ using System;
             Console.WriteLine("Taxes: {0:C}", Tax.CalcTax(this));
         }
 // ———————————————————————————————————————————————————— 【1】
-        // public decimal Salary()
+        // public decimal Salary()      // func
         // {
         //     return salary;
         // }
 
-        // public decimal Salary
+        // public decimal Salary         // property
         // {
         //     get { return salary; }
         // }
 
-        //public decimal Salary {get;}=5000;
+        //public decimal Salary {get;}=5000;        // property
 // ———————————————————————————————————————————————————— 【2】
-          // public decimal Salary(int a)
+          // public decimal Salary(int a)           // func
           // {
           //     return a*10;
           // }      
 // ———————————————————————————————————————————————————— 【3】
 
-          // public void Salary(int a,out int result)
-          // {
-          //     result=a*10;
-          // } 
+          public void Salary(int b,out int result)  // sub
+          {
+              result=b*10;
+          } 
 
     }
 
@@ -57,9 +57,9 @@ using System;
             // int a=4000;
             // return 0.08m * E.Salary(a);
             // ————————————————————————————————————————————————————【3】
-            // int rs;
-            // E.Salary(600,out rs)
-            // return 0.08m * rs;
+            int rs;
+            E.Salary(600,out rs);
+            return 0.08m * rs;
 
         }
     }
@@ -73,4 +73,3 @@ using System;
             E1.printEmployee();
         }
     }
-
