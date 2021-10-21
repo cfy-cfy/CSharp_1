@@ -1,3 +1,4 @@
+********************************************
 【1 访问符】public、private、internal、protected、
 【2 部分类/部分方法】partial
 【3 修饰符】static、virtual、abstract、sealed、override、readonly、new
@@ -15,4 +16,6 @@
 【13 委托事件】delegate、event
 【14 匿名】lambda
 【15 操作excel】com——Microsoft.Office.Interop、 NIPO、MySQL、 Access 、 DataSet 、 DataTabel
-【16 特性】Attribute
+【16 特性】Attribute、Conditional、DllImport、Reflection、AttributeUsage
+
+******************************************** 常用命名空间
