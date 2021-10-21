@@ -26,23 +26,41 @@
 【15 操作excel】com——Microsoft.Office.Interop、 NIPO、MySQL、 Access 、 DataSet 、 DataTabel
 【16 特性】Attribute、Conditional、DllImport、Reflection、AttributeUsage
 【17 文件操作】Driveinfo、Directoryinfo、Directory、FileInfo、File、Path、StreamReader、StreamWriter、FileStream、BinaryReader、BinaryWriter
+【18 转换数据类型】Parse、Convert
 
 ******************************************** 常用命名空间
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Net;
-using System.IO;
-using System.Drawing;
-using Newtonsoft.Json;
+using System.Text;         各种编码方式和正则表达式 
+using System.Text.RegularExpressions                    Regex 类
+using System.Net;          操作网络
+using System.Web;          asp.net的web编程 
+using System.IO;           对文件、文件夹的操作 
+using System.Drawing;      图像，画笔，和gdi，颜色
 using System.ComponentModel;
-using System.Windows.Forms;
+using System.Windows.Forms; 窗体及各种控件
+using System.Collections;   有ArrayList;Hashtable;Stack;Queue;DictionaryEntry;等集合
+using System.Enum;          操作枚举 
+using System.DateTime;      操作时间     
+using System.Math;          操作数字类
+using System.Array;         操作数组，排序，倒序等    
+using System.Random         产生随机数 
 
-using System.Collections;
+using System.Runtime.InteropServices.Marshal            操作内存 
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
+using System.Runtime.Serialization;                     用于序列化和反序列化
+using System.Reflection;    获取Assembly 的属性值  
+using System.Data;          访问和操作数据库，DataSet、DataTabel等类 
+using System.Media;         播放wav和系统wav文件 
+using System.Runtime;       运行时的各种信息 
+using System.Security;      用于安全和加密 
+using System.Threading;     多线程 
+using System.Xml;           操作xml文件 
+Microsoft.Win32.Registry    操作注册表  
+using System.Windows.Forms.Clipboard;                   操作剪贴板
 
 
+using Newtonsoft.Json;      第三方NuGet package，序列化/反序列化Json
 
 
