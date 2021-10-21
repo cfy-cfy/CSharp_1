@@ -1,3 +1,5 @@
+// 使用https://www.bejson.com/convert/json2csharp/ 网站将JSON 转为 C# 实体类代码
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
