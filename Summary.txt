@@ -30,37 +30,65 @@
 
 ******************************************** 常用命名空间
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;         各种编码方式和正则表达式 
-using System.Text.RegularExpressions                    Regex 类
-using System.Net;          操作网络
-using System.Web;          asp.net的web编程 
-using System.IO;           对文件、文件夹的操作 
-using System.Drawing;      图像，画笔，和gdi，颜色
-using System.ComponentModel;
-using System.Windows.Forms; 窗体及各种控件
-using System.Collections;   有ArrayList;Hashtable;Stack;Queue;DictionaryEntry;等集合
+using System.Collections;             有ArrayList;Hashtable;Stack;Queue;DictionaryEntry;等集合
+using System.Collections.Generic;     定义泛型集合的接口和类，泛型集合允许用户创建强类型集合，它能提供更好的类型安全性和性能.
+
+using System.Linq; 　　支持使用语言集成查询的查询.
+using System.Xml.Linq　　包含LINQtoXML的类.
+using System.Data.Linq　　包含支持与LINQtoSQL应用程序中的关系数据库进行交互的类.
+  
+using System.Text;                    各种编码方式和正则表达式 
+using System.Text.RegularExpressions  有Regex 类
+
+using System.Net;           操作网络
+using System.Web;           asp.net的web编程 
+
+using System.IO;            对文件、文件夹的操作 
+using System.IO.Comoression 提供基本的流压缩和解压缩服务的类.
+
+using System.Runtime.Serialization;     用于序列化和反序列化
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;                  第三方NuGet package，序列化/反序列化Json
+
+using System.Drawing;            图像，画笔，和gdi，颜色
+using System.Drawing.Text        这个命名空间提供了操作字体集合的功能．
+using System.Drawing.Printing    这个命名空间定义了一些类型实现在打印纸上绘制图像，和打印机交互以及格式化某个打印任务的总体外观等功能．
+using System.Drawing2D        　　这个命名空间提供高级的二维和失量图像功能．
+using System.Drawing.Imaging  　　这个命名空间定义了一些类型实现图形图像的操作．
+
+using System.Data;             访问和操作数据库，DataSet、DataTabel等类 
+using System.Data.OleDb　　     包含了一些操作OLEDB数据源的类型．
+using System.Data.Sql　　　　    能使你枚举安装在当前本地网络的SQLServer实例．
+using System.Data.SqlClient　　 包含了一些操作MSSQLServer数据库的类型，提供了和System.Data.OleDb相似的功能，但是针对SQL做了优化．
+using System.Data.SqlTypes　　  提供了一些表示SQL数据类型的类．
+using System.Data.Odbc　　　　  包含了操作Odbc数据源的类型．
+using System.Data.OracleClient 包含了操作Odbc数据库的类型．
+ 
+using System.Threading;     多线程 
+using System.Reflection;    获取Assembly 的属性值  
 using System.Enum;          操作枚举 
 using System.DateTime;      操作时间     
 using System.Math;          操作数字类
 using System.Array;         操作数组，排序，倒序等    
 using System.Random         产生随机数 
+using System.Windows.Forms; 窗体及各种控件
 
-using System.Runtime.InteropServices.Marshal            操作内存 
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;                     用于序列化和反序列化
-using System.Reflection;    获取Assembly 的属性值  
-using System.Data;          访问和操作数据库，DataSet、DataTabel等类 
-using System.Media;         播放wav和系统wav文件 
-using System.Runtime;       运行时的各种信息 
+using System.Runtime;                           运行时的各种信息 
+using System.Runtime.InteropServices            使得.NET类型可以与非托管代码交互.
+using System.Runtime.InteropServices.Marshal    操作内存 
+
 using System.Security;      用于安全和加密 
-using System.Threading;     多线程 
+using System.Net.Security　　这个命名空间提供用于主机间安全通信的网络流.
+using System.Web.Security　　这个命名空间包含的类用于在Web应用程序中实现ASP.NET安全性.
+
+using System.Media;         播放wav和系统wav文件 
 using System.Xml;           操作xml文件 
 Microsoft.Win32.Registry    操作注册表  
-using System.Windows.Forms.Clipboard;                   操作剪贴板
+using System.Windows.Forms.Clipboard;           操作剪贴板
+using System.ComponentModel;
+System.Diagnostics      　　这个命名空间所提供的类允许你启动系统进程,读取和写入事件日志以及使用性能计数器监视系统性能.
 
 
-using Newtonsoft.Json;      第三方NuGet package，序列化/反序列化Json
+
 
 
