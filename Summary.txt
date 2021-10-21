@@ -1,4 +1,5 @@
-********************************************
+******************************************** http://c.biancheng.net/view/2905.html
+
 【1 访问符】public、private、internal、protected、
 【2 部分类/部分方法】partial
 【3 修饰符】static、virtual、abstract、sealed、override、readonly、new
@@ -7,7 +8,14 @@
              single、double、float、char
              decimal、
 【6 集合】ArrayList、Stack、Queue、Hastable、SortedList
+
 【7 泛型集合】List<T>、Dictionary<K,V>
+【7 可空类型】Nullable<int> a、Nullable<int> a = Null、int? a、
+【7 泛型方法】private static void Add<T>(T a, T b){}
+            Add<double>(3.3, 4);
+【7 泛型类】class MyTest<T>{ private T[] items = new T[3];}
+          MyTest<int> test = new MyTest<int>();
+          
 【8 接口】interface
 【9 结构体】struct
 【10 枚举】enum
@@ -17,5 +25,24 @@
 【14 匿名】lambda
 【15 操作excel】com——Microsoft.Office.Interop、 NIPO、MySQL、 Access 、 DataSet 、 DataTabel
 【16 特性】Attribute、Conditional、DllImport、Reflection、AttributeUsage
+【17 文件操作】Driveinfo、Directoryinfo、Directory、FileInfo、File、Path、StreamReader、StreamWriter、FileStream、BinaryReader、BinaryWriter
 
 ******************************************** 常用命名空间
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Net;
+using System.IO;
+using System.Drawing;
+using Newtonsoft.Json;
+using System.ComponentModel;
+using System.Windows.Forms;
+
+using System.Collections;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+
+
+
+
