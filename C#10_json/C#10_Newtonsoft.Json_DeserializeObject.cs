@@ -67,9 +67,6 @@ using System.ComponentModel;
     {
         public string time { get; set; }
         public string ftime { get; set; }
-        /// <summary>
-        /// 您的快件正在派送中，请您准备签收（快递员：邸越，联系电话：17704315240）
-        /// </summary>
         public string context { get; set; }
         public string location { get; set; }
     }
