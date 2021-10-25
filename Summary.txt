@@ -63,6 +63,8 @@ using System.Data.SqlClient　　 包含了一些操作MSSQLServer数据库的�
 using System.Data.SqlTypes　　  提供了一些表示SQL数据类型的类．
 using System.Data.Odbc　　　　  包含了操作Odbc数据源的类型．
 using System.Data.OracleClient 包含了操作Odbc数据库的类型．
+
+using System.ComponentModel; // DefaultValueAttribute是指定属性 (Property) 的默认值。
  
 using System.Threading;     多线程 
 using System.Reflection;    获取Assembly 的属性值  
@@ -85,7 +87,6 @@ using System.Media;         播放wav和系统wav文件
 using System.Xml;           操作xml文件 
 Microsoft.Win32.Registry    操作注册表  
 using System.Windows.Forms.Clipboard;           操作剪贴板
-using System.ComponentModel;
 System.Diagnostics      　　这个命名空间所提供的类允许你启动系统进程,读取和写入事件日志以及使用性能计数器监视系统性能.
 
 
