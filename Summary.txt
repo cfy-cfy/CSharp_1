@@ -6,7 +6,7 @@
 【4 方法】void、Task、Task<TResult>
 【5 数据类型】sbyte、byte、int、uint、long、ulong、short、ushort
              single、double、float、char
-             decimal、
+             decimal、bool
 【6 集合】ArrayList、Stack、Queue、Hastable、SortedList
 
 【7 泛型集合】List<T>、Dictionary<K,V>
