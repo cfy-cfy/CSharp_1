@@ -30,7 +30,7 @@ public class Program
 
     string gettxt="";
 
-    HtmlNodeCollection spanNodes = doc.DocumentNode.SelectNodes("//font/font/font/span");
+    HtmlNodeCollection spanNodes = doc.DocumentNode.SelectNodes("//p/font/font/font/span");
     Console.WriteLine(spanNodes.Count);
     for (int j = 0; j < spanNodes.Count; j++)
     {
