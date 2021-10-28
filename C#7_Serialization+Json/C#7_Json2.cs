@@ -21,21 +21,27 @@ public class Program
     data.Add(dt);
     for (int i = 0; i < data.Count; i++)
     {
-        Console.WriteLine("{0},{1},{2}",data[i].country,data[i].province,data[i].city);
+        Console.WriteLine("data: {0},{1},{2} \n\r————————————————————————————",data[i].country,data[i].province,data[i].city);
     }
 
     dict.address=data;
+
+    for (int i = 0; i < dict.address.Count; i++)
+    {
+        Console.WriteLine("dict.address: {0},{1},{2} ",dict.address[i].country,dict.address[i].province,dict.address[i].city);
+    }
+
 
     string json=JsonConvert.SerializeObject(dict);
     Console.WriteLine(json);
 
     Dict dd = JsonConvert.DeserializeObject<Dict>(json);
-    Console.WriteLine("{0}，{1}，{2}",dd.name,dd.gender,dd.old);
+    Console.WriteLine("dd: {0}，{1}，{2} ",dd.name,dd.gender,dd.old);
     Console.WriteLine(dd.address.Count);
 
     for (int i = 0; i < dd.address.Count; i++)
     {
-        Console.WriteLine("{0},{1},{2}",dd.address[i].country,dd.address[i].province,dd.address[i].city);
+        Console.WriteLine("dd.address: {0},{1},{2} ",dd.address[i].country,dd.address[i].province,dd.address[i].city);
     }
 
   }
