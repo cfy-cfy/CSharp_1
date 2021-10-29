@@ -17,6 +17,8 @@ public class Program
         list.Add(new Student(2, "小李", 21));
         list.Add(new Student(3, "小赵", 22));
 
+        Console.WriteLine("Hello Sunny : {0} ,{1} ,{2}",list[1].id,list[1].name,list[1].age);
+
         foreach(Student stu in list)
         {   Console.WriteLine(stu);
             Console.WriteLine("Hello World : {0} ,{1} ,{2}",stu.id,stu.name,stu.age);
@@ -44,4 +46,3 @@ public class Student
         return id + "：" + name + "：" + age;
     }
 }
-
