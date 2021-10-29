@@ -28,6 +28,9 @@ public class Program
         {
           Console.WriteLine("Hello Pretty : {0} ,{1} ,{2}",list[i].id,list[i].name,list[i].age);
         }
+        string json=JsonConvert.SerializeObject(list);
+        Console.WriteLine(json);        
+        
     }
 }
 public class Student
