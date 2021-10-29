@@ -34,7 +34,9 @@ public class Program
     {
       Console.WriteLine("dict = {0},id = {1},name = {2},age = {3}",dict[i],dict[i].id,dict[i].name,dict[i].age);
     }
-
+    
+    string json=JsonConvert.SerializeObject(dict);
+    Console.WriteLine(json);
 
   }
 }
